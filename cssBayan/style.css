@@ -1,0 +1,159 @@
+/* roboto-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/roboto-v30-latin-300.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/roboto-v30-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v30-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v30-latin-300.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v30-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v30-latin-300.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+
+html{
+    box-sizing: border-box;
+    font-size:10px;
+    font-family: 'Roboto',  Arial, Helvetica, sans-serif;
+ 
+  }
+  
+  *,*::before,*::after{
+  box-sizing: inherit;
+  }
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+  body {
+    margin: 0;
+    background-color: bisque;
+  }
+
+input{
+    display:none;
+}
+
+.bayan__item{
+    margin: 20px auto;
+   text-align: center;
+   cursor: pointer;
+   border-bottom: grey solid 1px;
+}
+.wrapper{
+  max-width: 600px;  
+  margin: 0 auto;
+
+}
+label{
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: start; 
+    cursor: pointer;
+}
+.plus{
+    width: 20px;
+    height: 20px;
+}
+.arrow{
+    width: 35px;
+    height: 35px;
+}
+
+img{
+    width: 60%;
+}
+.bayan__content{
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+input:checked +label+div{
+    display: block;
+    animation: showCard 1.5s 1;
+ }
+ .arrow{
+    display:none;
+ }
+ input:checked + label>img[class="arrow"] {
+    display: block;
+ }
+ input:checked + label>img[class="plus"] {
+    display: none;
+ }
+
+ .wrapper:hover{
+    color: rgb(96, 96, 117);
+    transition: 0.3s;
+}
+label:hover{
+    opacity:0.75;
+    transition: 0.2s;
+}
+
+input:hover+label+div{
+    display: block;
+    animation: showCard 1.5s 1;
+}
+.bayan__content:hover{
+    display: block;
+    animation: showCard 1.5s 1;
+}
+
+
+
+@keyframes showCard{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+
+
+.input:checked+label{
+    color: black;
+
+}
+
+@media screen  (max-width 820px) and (min-width 321px){
+    html{
+        font-size:8px;
+    }
+   
+    
+}
+
+@media screen  (max-width 320px){
+    html{
+        font-size:6px;
+    }
+    
+}
+@media screen (min-width 821px) and (max-width 3000px){
+  
+ 
+}
